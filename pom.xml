@@ -15,15 +15,14 @@
     </properties>
 
     <dependencies>
-        <!-- A06: Vulnerable and Outdated Components -->
-        <!-- Intentionally using an old version of commons-collections known to have severe deserialization vulnerabilities (CVE-2015-7501) -->
+        <!-- A03:2025 Software Supply Chain Failures - Vulnerable Dependency -->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version> 
         </dependency>
 
-        <!-- Dummy logging dependency -->
+        <!-- Dummy logging dependency API -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -53,7 +52,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.sasttest.VulnerableApp</mainClass>
+                            <!-- UPDATED THIS LINE to point to the new 2025 Web App -->
+                            <mainClass>com.example.sasttest.Owasp2025WebApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
